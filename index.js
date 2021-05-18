@@ -8,8 +8,8 @@ bot.on('message', (msg) => {
   const chatId = msg.chat.id;
   const name = msg.chat.first_name;
 
-  const animal = ['краб', 'слон', 'жираф'];
-  const random = Math.floor(Math.random() * 3);
+  const animal = ['краб', 'слон', 'жираф', 'кот', 'собака'];
+  const random = Math.floor(Math.random() * 5);
 
   if (name === 'Eugene') {
     return bot.sendMessage(chatId, `${name}, краб`);
