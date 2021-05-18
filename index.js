@@ -10,10 +10,13 @@ bot.on('message', (msg) => {
 
   const animal = ['краб', 'слон', 'жираф', 'кот', 'собака'];
   const random = Math.floor(Math.random() * 5);
+  const num = Math.floor(Math.random() * 3 + 1);
 
   if (name === 'Eugene') {
     return bot.sendMessage(chatId, `${name}, краб`);
   }
 
-  bot.sendMessage(chatId, `${name}, ${animal[random]}`);
+  if (num % 3 === 0) {
+    return bot.sendMessage(chatId, `${name}, ${animal[random]}`);
+  }
 });
